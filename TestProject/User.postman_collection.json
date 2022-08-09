@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "f235af11-1256-47b1-91bd-fc4e76308ee9",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterCandidate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Flash\",\r\n    \"emailid\" : \"flash@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/candidate/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IsStarted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/candidate/exam/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						"exam",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SubmitQuiz",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"question_id\": 1,\r\n        \"answer\": 1\r\n    },\r\n    {\r\n        \"question_id\": 2,\r\n        \"answer\": 1\r\n    },\r\n    {\r\n        \"question_id\": 4,\r\n        \"answer\": 1\r\n    },\r\n    {\r\n        \"question_id\": 5,\r\n        \"answer\": 2\r\n    },\r\n    {\r\n        \"question_id\": 6,\r\n        \"answer\": 2\r\n    },\r\n    {\r\n        \"question_id\": 7,\r\n        \"answer\": 2\r\n    },\r\n    {\r\n        \"question_id\": 8,\r\n        \"answer\": 2\r\n    }\r\n]\r\n\r\n[\r\n    {\r\n        \"question_id\": 1,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 2,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 4,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 5,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 6,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 7,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 8,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 9,\r\n        \"answer\": 1\r\n\r\n    },\r\n    {\r\n        \"question_id\": 10,\r\n        \"answer\": 1\r\n\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/candidate/submitQuiz/?id=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"candidate",
+						"submitQuiz",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
