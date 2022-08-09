@@ -1,0 +1,38 @@
+Functionality - Register Candidate
+Expected - Should validate the User email ID. If email id already exists then display "Email Id already exists, Please enter a new email id to register."
+Existing - Validation in  Register candidate is not working. 
+
+
+Functionality - getAllQuestions in Candidate Controller (/exam/{Id})
+Expected Behavior - Should Validate the candidate ID only then display the questions. If candidate Id is invalid, then show a message. "Enter a valid candidate ID".
+Existing - Displaying all the questions with out validating the candidiate.
+
+
+Functionality  - Submit Quiz. 
+Expected - Validate the submtted answers by the Candidate.If the candidate has answered 3 or more question right then display - "You are selected for next round."
+Existing - No Validation, by default the candidate is not selected.
+
+
+Functionality  - find Candidate by Id
+Expected - Return a boolean value or Return the candidate by ID.
+Exiting - All the candidiates.
+
+
+Functionality - delete candiadate by Id
+Existing - delete question by passing full details of Question.
+Expected - delete by Question ID. 
+
+
+Functionality - Save a question (addQuestion)
+Expected  - Save the question in DB.
+Existing  -  Not able to save the question in DB.
+
+
+Functionality - delete Multiple questions.
+Expected - Pass a list of Question Id's. Should Delete all the questions which are available. For the ones which are not available display - "These questions are not available - ex: 1 ,6"
+Existing - Not validating or displaying questions which are not available.
+
+
+Functionality - Update Question an existing question.
+Expected - Should update all the changes to a quuestion. 
+Existing - Not able to update a question.
