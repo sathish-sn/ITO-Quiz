@@ -11,9 +11,10 @@ import com.itoquiz.entity.Answer;
 @Service
 public class AnswerServiceImpl{
 	
+	@Autowired
 	private AnswerRepository answerRepository;
 	
-	@Autowired
+	
 	AnswerServiceImpl(AnswerRepository answerRepository){
 		this.answerRepository = answerRepository;
 	}

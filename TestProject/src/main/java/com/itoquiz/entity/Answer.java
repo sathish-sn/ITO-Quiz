@@ -1,6 +1,8 @@
 package com.itoquiz.entity;
 
 import java.io.Serializable;
+import java.util.List;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +29,8 @@ public class Answer implements Serializable {
 	@Column(name = "Answer")
 	private int answer;
 	
-	
+//	@Column(name = "Answer")
+//	private List<Map<Integer, Integer>> answer;
 
 	public Answer(int candidateId, int question_id, int answer) {
 		super();

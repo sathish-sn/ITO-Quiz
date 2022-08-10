@@ -90,25 +90,13 @@ public class GlobalExceptionHandler extends Throwable{
 	@ExceptionHandler(SQLIntegrityConstraintViolationException.class)
 	public ResponseEntity<ApiResponse> illegalArgumentException(SQLIntegrityConstraintViolationException exception){
 		
-		String message = "Email is already exits";
+		String message = "Email Id already exists, Please enter a new email id to register.";
 		
 		ApiResponse apiResponse = new ApiResponse(message);
 		
 		return new ResponseEntity<ApiResponse> (apiResponse,HttpStatus.NOT_FOUND);
 	}
-//	
-//	@ResponseStatus(HttpStatus.BAD_REQUEST)
-//	@ExceptionHandler(NullPointerException.class)
-//	public ResponseEntity<ApiResponse> illegalArgumentException(NullPointerException exception){
-//		
-//		String message = "Can't be a null ";
-//		System.out.println(exception.getStackTrace());
-//		System.out.println(exception.getCause());
-//		
-//		ApiResponse apiResponse = new ApiResponse(message);
-//		
-//		return new ResponseEntity<ApiResponse> (apiResponse,HttpStatus.NOT_FOUND);
-//	}
+
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MissingPathVariableException.class)
 	public ResponseEntity<ApiResponse> missingPathVariableException(MissingPathVariableException exception){
